@@ -18,6 +18,7 @@ late Database db; // Sqflite database instance
 
 Future<void> openDatabaseInstance() async {
   final dir = await getApplicationDocumentsDirectory();
+  final dir1 = await getApplicationDocumentsDirectory();
   final dbPath = p.join(dir.path, 'Munshi.db');
   db = await openDatabase(dbPath, version: 1, onCreate: (db, version) {
     // Define table creation here
