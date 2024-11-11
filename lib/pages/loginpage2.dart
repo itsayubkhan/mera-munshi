@@ -126,10 +126,9 @@ class loginpage2 extends StatelessWidget {
               ),
               MyButton(
                 ontap: () {
-                  backupDatabase();
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => Homepage()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
                   final snackBar = SnackBar(
                     duration: const Duration(seconds: 2),

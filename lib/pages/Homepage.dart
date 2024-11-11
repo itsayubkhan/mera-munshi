@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:mera_munshi/Components/PrivacyAndPolicy.dart';
 import 'package:mera_munshi/Components/ads.dart';
 import 'package:mera_munshi/Controllers/homepageController.dart';
 import 'package:mera_munshi/utils/DBHandler.dart';
@@ -222,6 +223,8 @@ class _HomepageState extends State<Homepage> with WidgetsBindingObserver {
       );
     }
   }
+
+  
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -378,6 +381,29 @@ class _HomepageState extends State<Homepage> with WidgetsBindingObserver {
                       );
                     }
                   },
+                ),
+              ),
+              Container(
+                margin:
+                const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.white,
+                  ),
+                  color: Colors.grey[200],
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.health_and_safety_sharp,
+                    color: Colors.grey,
+                  ),
+                  title: Text(
+                    'Privacy and Policy',
+                    style:
+                    TextStyle(fontFamily: 'Eina', color: Colors.grey[700]),
+                  ),
                 ),
               ),
             ],
